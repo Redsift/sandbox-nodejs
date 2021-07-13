@@ -1,5 +1,13 @@
-const capnp = require('capnp');
-const rpcSchema = capnp.import(__dirname + '/schema/rpc2.capnp');
+//const capnp = require('capnp');
+const capnp = {
+  parse: function() { throw new Error('not supported')},
+  serialize: function() { throw new Error('not supported')},
+};
+
+//const rpcSchema = capnp.import(__dirname + '/schema/rpc2.capnp');
+const rpcSchema = {
+  RpcRequest: {},
+};
 
 const b64Decode = (d) => {
   if (d.data instanceof Array) {
